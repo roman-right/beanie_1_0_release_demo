@@ -38,7 +38,7 @@ For this demo I set up indexes here in two ways:
 - Simple with the `Indexed` field
 - More complex with the `Collection` inner class
 
-More information about document setup could be found by [link]()
+More information about document setup could be found by [link](https://roman-right.github.io/beanie/tutorial/install/)
 
 ## Create documents
 
@@ -114,6 +114,8 @@ If you need to find a single document, you can use the `find_one` method instead
 ```python
 product = await Product.find_one(Product.name == "Peanut Bar")
 ```
+
+The detailed tutorial about finding the documents can be found by [link](https://roman-right.github.io/beanie/tutorial/find/)
 
 ## Update
 
@@ -216,3 +218,9 @@ await Product.find_one(Product.name == "Chocolate Truffle").delete()
 ## Conclusion
 
 In my first article, I said, that Beanie is a micro ODM. I'm removing the prefix `micro` now. Beanie is a rich Python ODM for MongoDB with a lot of features, like query builder, projections, and migrations. It helps me to build services and applications a lot. I hope, it will help many other developers too.
+
+## Links
+
+- [Beanie Project](https://github.com/roman-right/beanie)
+- [Documentation](https://roman-right.github.io/beanie/)
+- [Discord Server](https://discord.gg/ZTTnM7rMaz)
