@@ -72,12 +72,21 @@ Now you can use Python native comparison operators with the document class
 fields:
 
 ```python
-products = await Product.find(
-    Product.category.name == "Chocolate"
-).to_list()
+Product.find(Product.category.name == "Chocolate")
 ```
 
-The `find()` method will return the `FindMany` query, which uses an async generator pattern, and data can be available via async for a loop. To retrieve the list, I use here `to_list` method.
+The `find()` method will return the `FindMany` query, which uses an async generator pattern, and data can be available via `async for` loop. 
+
+```python
+async for item in Product.find(Product.category.name == "Chocolate"):
+    print(item)
+```
+
+To retrieve the list, I use `to_list()` method.
+
+```python
+products = await Product.find( Product.category.name == "Chocolate").to_list()
+```
 
 `FindMany` queries provide also sort, skip, limit, and project methods:
 
