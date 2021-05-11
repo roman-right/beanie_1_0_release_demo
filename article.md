@@ -1,7 +1,7 @@
-I'm happy to introduce to you Beanie 1.0.0 - Python ODM (Object Document
+I'm happy to introduce to you [Beanie 1.0.0](https://github.com/roman-right/beanie) - Python ODM (Object Document
 Mapper) for MongoDB!
 
-Two months ago I published the very first Beanie release. You can find the article about it by the link. I demonstrated there, how simple it is, to make a CRUD service with FastAPI and Beanie.  
+Two months ago I published the very first Beanie release. You can find the article about it by the [link](https://dev.to/romanright/announcing-beanie-mongodb-odm-56e). I demonstrated there, how simple it is, to make a CRUD service with FastAPI and Beanie.  
 
 Many features were added since that time. Today I want to show the most interesting things, which
 came with this major version update.
