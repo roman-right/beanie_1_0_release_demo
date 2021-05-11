@@ -112,7 +112,9 @@ from beanie.operators import Text
 products = await Product.find(Text("Chocolate")).to_list()
 ```
 
-Or, for the fine-tuning, native PyMongo syntax can be used there:
+The whole list of the find operators can be found [here](https://roman-right.github.io/beanie/api/operators/find/)
+
+You can use native PyMongo syntax for fine-tuning here too:
 
  ```python
 products = await Product.find({"price": {"gte": 2}}).to_list()
@@ -150,6 +152,8 @@ product = await Product.find_one(Product.name == "Peanut Bar")
 await product.update(Inc({Product.price: -1}))
 ```
 
+The list of the update operators can be found by [link](https://roman-right.github.io/beanie/api/operators/update/)
+
 Native PyMongo syntax is also supported for this
 
 ```python
@@ -159,7 +163,7 @@ await Product.find(
 
 ```
 
-There is a list of preset update operations, which could be used as methods
+There is a list of preset update operations, which could be used as methods. Increment, for example:
 
 ```python
 await Product.find(
@@ -205,6 +209,8 @@ avg_choco_price = await Product.find(
     Product.category.name == "Chocolate"
 ).avg(Product.price)
 ```
+
+[Here](https://roman-right.github.io/beanie/api/interfaces/) you can find the doc with all the preset methods.
 
 ## Delete
 
